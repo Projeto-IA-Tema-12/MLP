@@ -2,12 +2,13 @@
 
 Comparação entre **Busca Aleatória** e **Algoritmo Genético** para escolher os hiperparâmetros de uma rede neural MLP.
 
-Cada vez que um algoritmo testa uma combinação, ele **treina a MLP** e mede a **acurácia de validação**. =.
+Cada vez que um algoritmo testa uma combinação, ele **treina a MLP** e mede a **acurácia de validação**.
 
 ## Os algoritmos
 
 ### MLP (o modelo)
-Uma rede neural simples (*Multi-Layer Perceptron*) para classificação. É ela que está sendo otimizada: os algoritmos não mexem nos pesos, só escolhem seus hiperparâmetros.
+Uma rede neural simples (*Multi-Layer Perceptron*) para classificação. 
+Os algoritmos não mexem nos pesos, só escolhem seus hiperparâmetros.
 
 Detalhes da arquitetura e do treino em [`model/README.md`](model/README.md).
 
