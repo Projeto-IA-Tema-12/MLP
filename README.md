@@ -1,12 +1,8 @@
 # Otimização de hiperparâmetros de uma MLP
 
-Comparação entre **Busca Aleatória** e **Algoritmo Genético** para escolher os hiperparâmetros de uma rede neural MLP, com o mesmo orçamento de avaliações para os dois métodos.
+Comparação entre **Busca Aleatória** e **Algoritmo Genético** para escolher os hiperparâmetros de uma rede neural MLP.
 
-## Ideia geral
-
-Treinar uma MLP depende de escolhas como o número de neurônios e a taxa de aprendizado. Testar todas as combinações é caro, então usamos algoritmos de busca que tentam achar uma boa combinação com poucos treinos.
-
-Cada vez que um algoritmo testa uma combinação, ele **treina a MLP** e mede a **acurácia de validação**. Esse valor é o *fitness* (quanto maior, melhor).
+Cada vez que um algoritmo testa uma combinação, ele **treina a MLP** e mede a **acurácia de validação**. =.
 
 ## Os algoritmos
 
@@ -21,10 +17,10 @@ Detalhes da arquitetura e do treino em [`model/README.md`](model/README.md).
 3. Repete até acabar o orçamento de avaliações.
 4. Devolve a melhor combinação encontrada.
 
-É simples, não depende de nenhum parâmetro de controle e serve como *baseline*: qualquer método mais sofisticado precisa ganhar dela para valer a pena.
+É simples, não depende de nenhum parâmetro de controle e serve como *baseline*.
 
 ### Algoritmo Genético
-Inspirado na evolução natural. Cada combinação de hiperparâmetros é um **indivíduo**, e um conjunto deles forma uma **população**.
+ Cada combinação de hiperparâmetros é um **indivíduo**, e um conjunto deles forma uma **população**.
 
 1. **População inicial:** indivíduos sorteados aleatoriamente.
 2. **Avaliação:** treina a MLP de cada indivíduo e calcula o fitness.
@@ -34,7 +30,6 @@ Inspirado na evolução natural. Cada combinação de hiperparâmetros é um **i
 6. **Nova geração:** os filhos (e, se houver elitismo, os melhores da geração anterior) formam a próxima população.
 7. Repete os passos 2 a 6 até acabar o orçamento de avaliações.
 
-A intenção é concentrar as buscas perto das regiões promissoras, em vez de testar combinações sem nenhuma pista.
 
 ## Espaço de busca
 
@@ -123,11 +118,3 @@ Ele executa todo o experimento e a análise. As células, em ordem:
 
 ![Comparação](graficos/grafico_comparativo.png)
 
-## Problemas comuns
-
-| Erro | Causa e solução |
-|---|---|
-| `ModuleNotFoundError: model` (ou `algoritmos`, `utils`) | O notebook não achou a raiz do projeto. Rode a primeira célula (que ajusta o `sys.path`) e reinicie o kernel. |
-| `ModuleNotFoundError` em um pacote como `sklearn` | O kernel não é o do `.venv`. Escolha o kernel `.venv` e confira o `pip install -r requirements.txt`. |
-| Nome de arquivo errado | O import precisa bater com o nome em `algoritmos/` (`algoritmo_genetico.py`, `busca.py`). |
-| Muitos avisos de convergência | Já são ocultados na primeira célula com `warnings.filterwarnings`. |
