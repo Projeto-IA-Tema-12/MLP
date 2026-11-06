@@ -66,8 +66,8 @@ MLP/
 ├── utils/
 │   └── graficos.py              # funções que geram as figuras
 ├── notebook_analise/
-│   └── avaliacao.ipynb          # execução dos experimentos e análise
-└── graficos/                    # figuras geradas
+      └── avaliacao.ipynb          # execução dos experimentos e análise
+      └── graficos/                    # figuras geradas
 ```
 
 ## Como executar
@@ -117,5 +117,5 @@ Ele executa todo o experimento e a análise. As células, em ordem:
 - Acurácia de validação e de teste: **96,67%** nos dois casos.
 - No gráfico de convergência, a Busca Aleatória termina com média um pouco maior, mas as faixas de variação dos dois métodos se sobrepõem bastante. Com um espaço de busca pequeno e um conjunto de teste de 30 exemplos, a diferença não é conclusiva.
 
-![Comparação](graficos/grafico_comparativo.png)
+![Comparação](notebook_analise/graficos/grafico_comparativo.png)
 
