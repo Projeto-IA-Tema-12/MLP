@@ -6,15 +6,6 @@ Classificar as três espécies da base Iris usando uma MLP com
 exatamente uma camada escondida. Comparar algoritmo genético
 e busca aleatória na seleção dos hiperparâmetros.
 
-## Ambiente
-
-Criar o ambiente virtual:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-```
 
 ## Arquivos
 
