@@ -116,6 +116,10 @@ Ele executa todo o experimento e a análise. As células, em ordem:
 - Melhor combinação encontrada pelos dois métodos: `neuronios = 5`, `taxa_aprendizado = 0.001`.
 - Acurácia de validação e de teste: **96,67%** nos dois casos.
 - No gráfico de convergência, a Busca Aleatória termina com média um pouco maior, mas as faixas de variação dos dois métodos se sobrepõem bastante. Com um espaço de busca pequeno e um conjunto de teste de 30 exemplos, a diferença não é conclusiva.
-
+  
+### Comparação com apenas uma rodada
 ![Comparação](notebook_analise/graficos/grafico_comparativo.png)
+
+### Melhor acumulado 
+![Comparação_melhor](notebook_analise/graficos/grafico_melhor_acumulado.png)
 
