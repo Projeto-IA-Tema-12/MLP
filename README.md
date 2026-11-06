@@ -148,8 +148,3 @@ Ele executa todo o experimento e a análise. As células, em ordem:
 
 ---
 
-### Comparação com apenas uma rodada
-
-### Melhor acumulado
-Aqui está o arquivo completo em **Markdown**, com os títulos, imagens e descrições do notebook e dos resultados integrados sem nenhuma alteração no texto original:
-
