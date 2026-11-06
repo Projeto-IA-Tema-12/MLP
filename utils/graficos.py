@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from sklearn.exceptions import ConvergenceWarning
 
 from model.mlp import avaliar_configuracao, avaliar_no_teste
-from algoritmos.algortimo_genetico import algoritmo_genetico
+from algoritmos.algoritmo_genetico import algoritmo_genetico
 from algoritmos.busca import busca_aleatoria
 
 # Silencia avisos de não-convergência da MLP no terminal
@@ -48,7 +48,7 @@ def plotar_busca_aleatoria(curva_best, acuracias_individuais):
     plt.grid(True, linestyle=":", alpha=0.6)
     plt.legend(fontsize=10, loc="lower right")
     plt.tight_layout()
-    plt.savefig("grafico_busca_aleatoria.png", dpi=300)
+    plt.savefig("graficos/grafico_busca_aleatoria.png", dpi=300)
     print("-> Gráfico 'grafico_busca_aleatoria.png' salvo com sucesso!")
 
 
