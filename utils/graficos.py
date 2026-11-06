@@ -49,6 +49,9 @@ def plotar_busca_aleatoria(curva_best, acuracias_individuais):
     plt.grid(True, linestyle=":", alpha=0.6)
     plt.legend(fontsize=10, loc="lower right")
     plt.tight_layout()
+    
+    # Cria a pasta caso não exista antes de salvar
+    os.makedirs("graficos", exist_ok=True)
     plt.savefig("graficos/grafico_busca_aleatoria.png", dpi=300)
     print("-> Gráfico 'grafico_busca_aleatoria.png' salvo com sucesso!")
 
@@ -95,6 +98,9 @@ def plotar_algoritmo_genetico(curva_best, historico_geracoes):
     plt.grid(True, linestyle=":", alpha=0.6)
     plt.legend(fontsize=10, loc="lower right")
     plt.tight_layout()
+
+    # Cria a pasta caso não exista antes de salvar
+    os.makedirs("graficos", exist_ok=True)
     plt.savefig("graficos/grafico_algoritmo_genetico.png", dpi=300)
     print("-> Gráfico 'grafico_algoritmo_genetico.png' salvo com sucesso!")
 
@@ -134,6 +140,9 @@ def plotar_comparacao(curva_random, curva_ag):
     plt.grid(True, linestyle=":", alpha=0.6)
     plt.legend(fontsize=11, loc="lower right")
     plt.tight_layout()
+
+    # Cria a pasta caso não exista antes de salvar
+    os.makedirs("graficos", exist_ok=True)
     plt.savefig("graficos/grafico_comparativo.png", dpi=300)
     print("-> Gráfico 'grafico_comparativo.png' salvo com sucesso!")
 
